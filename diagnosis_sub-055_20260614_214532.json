@@ -1,0 +1,1915 @@
+{
+  "timestamp": "2026-06-14T21:45:32.698704",
+  "source": {
+    "type": "holdout",
+    "subject_id": "sub-055",
+    "true_label": "Healthy Control"
+  },
+  "recording": {
+    "sampling_frequency_hz": 500.0,
+    "num_channels": 19,
+    "channel_names": [
+      "Fp1",
+      "Fp2",
+      "F7",
+      "F3",
+      "Fz",
+      "F4",
+      "F8",
+      "T3",
+      "C3",
+      "Cz",
+      "C4",
+      "T4",
+      "T5",
+      "P3",
+      "Pz",
+      "P4",
+      "T6",
+      "O1",
+      "O2"
+    ],
+    "num_windows": 164
+  },
+  "inference_parameters": {
+    "checkpoint": "gcn_binary_func_best.pt",
+    "window_duration_sec": 5.0,
+    "plv_threshold": 0.85,
+    "apply_filter": true,
+    "apply_ica": false,
+    "batch_size": 16,
+    "connectivity_type": "functional",
+    "connectivity_type_label": "Functional (PLV synchronization)",
+    "connectivity_type_requested": "auto"
+  },
+  "model": {
+    "model_name": "GCN",
+    "hidden_channels": 32,
+    "dropout": 0.6,
+    "num_node_features": 4,
+    "num_classes": 2,
+    "classification_mode": "binary",
+    "trained_connectivity_type": "functional",
+    "class_labels": {
+      "0": "Healthy Control",
+      "1": "Alzheimer's Disease"
+    },
+    "training_epoch": 7,
+    "training_metrics": {
+      "accuracy": 0.7099332220367279,
+      "macro_precision": 0.7514283294063099,
+      "macro_recall": 0.7463223411225158,
+      "macro_f1": 0.709801741482325,
+      "per_class_precision": {
+        "0": 0.5851703406813628,
+        "1": 0.917686318131257
+      },
+      "per_class_recall": {
+        "0": 0.9221052631578948,
+        "1": 0.5705394190871369
+      },
+      "per_class_f1": {
+        "0": 0.7159787494891704,
+        "1": 0.7036247334754797
+      },
+      "confusion_matrix": [
+        [
+          1752,
+          148
+        ],
+        [
+          1242,
+          1650
+        ]
+      ],
+      "num_samples": 4792
+    },
+    "gat_heads_first_layer": 4,
+    "gat_heads_second_layer": 1
+  },
+  "results": {
+    "final_label": "Healthy Control",
+    "final_confidence": 0.799977,
+    "num_windows": 164,
+    "connectivity_type": "functional",
+    "mean_probabilities": {
+      "Healthy Control": 0.799977,
+      "Alzheimer's Disease": 0.200023
+    },
+    "window_vote_counts": {
+      "Healthy Control": 153,
+      "Alzheimer's Disease": 11
+    },
+    "window_vote_ratios": {
+      "Healthy Control": 0.932927,
+      "Alzheimer's Disease": 0.067073
+    },
+    "correct": true
+  },
+  "per_window": [
+    {
+      "window_index": 0,
+      "start_sec": 0.0,
+      "end_sec": 5.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.516395,
+      "class_probabilities": {
+        "Healthy Control": 0.483605,
+        "Alzheimer's Disease": 0.516395
+      }
+    },
+    {
+      "window_index": 1,
+      "start_sec": 5.0,
+      "end_sec": 10.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.513279,
+      "class_probabilities": {
+        "Healthy Control": 0.486721,
+        "Alzheimer's Disease": 0.513279
+      }
+    },
+    {
+      "window_index": 2,
+      "start_sec": 10.0,
+      "end_sec": 15.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.70332,
+      "class_probabilities": {
+        "Healthy Control": 0.70332,
+        "Alzheimer's Disease": 0.29668
+      }
+    },
+    {
+      "window_index": 3,
+      "start_sec": 15.0,
+      "end_sec": 20.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.709924,
+      "class_probabilities": {
+        "Healthy Control": 0.709924,
+        "Alzheimer's Disease": 0.290076
+      }
+    },
+    {
+      "window_index": 4,
+      "start_sec": 20.0,
+      "end_sec": 25.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.512314,
+      "class_probabilities": {
+        "Healthy Control": 0.487686,
+        "Alzheimer's Disease": 0.512314
+      }
+    },
+    {
+      "window_index": 5,
+      "start_sec": 25.0,
+      "end_sec": 30.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.634499,
+      "class_probabilities": {
+        "Healthy Control": 0.634499,
+        "Alzheimer's Disease": 0.365501
+      }
+    },
+    {
+      "window_index": 6,
+      "start_sec": 30.0,
+      "end_sec": 35.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.682227,
+      "class_probabilities": {
+        "Healthy Control": 0.682227,
+        "Alzheimer's Disease": 0.317773
+      }
+    },
+    {
+      "window_index": 7,
+      "start_sec": 35.0,
+      "end_sec": 40.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.766461,
+      "class_probabilities": {
+        "Healthy Control": 0.233539,
+        "Alzheimer's Disease": 0.766461
+      }
+    },
+    {
+      "window_index": 8,
+      "start_sec": 40.0,
+      "end_sec": 45.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.906419,
+      "class_probabilities": {
+        "Healthy Control": 0.906419,
+        "Alzheimer's Disease": 0.093581
+      }
+    },
+    {
+      "window_index": 9,
+      "start_sec": 45.0,
+      "end_sec": 50.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.612307,
+      "class_probabilities": {
+        "Healthy Control": 0.612307,
+        "Alzheimer's Disease": 0.387693
+      }
+    },
+    {
+      "window_index": 10,
+      "start_sec": 50.0,
+      "end_sec": 55.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.520691,
+      "class_probabilities": {
+        "Healthy Control": 0.479309,
+        "Alzheimer's Disease": 0.520691
+      }
+    },
+    {
+      "window_index": 11,
+      "start_sec": 55.0,
+      "end_sec": 60.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.584381,
+      "class_probabilities": {
+        "Healthy Control": 0.584381,
+        "Alzheimer's Disease": 0.415619
+      }
+    },
+    {
+      "window_index": 12,
+      "start_sec": 60.0,
+      "end_sec": 65.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.544322,
+      "class_probabilities": {
+        "Healthy Control": 0.544322,
+        "Alzheimer's Disease": 0.455678
+      }
+    },
+    {
+      "window_index": 13,
+      "start_sec": 65.0,
+      "end_sec": 70.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.605383,
+      "class_probabilities": {
+        "Healthy Control": 0.394617,
+        "Alzheimer's Disease": 0.605383
+      }
+    },
+    {
+      "window_index": 14,
+      "start_sec": 70.0,
+      "end_sec": 75.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.700075,
+      "class_probabilities": {
+        "Healthy Control": 0.700075,
+        "Alzheimer's Disease": 0.299925
+      }
+    },
+    {
+      "window_index": 15,
+      "start_sec": 75.0,
+      "end_sec": 80.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.732807,
+      "class_probabilities": {
+        "Healthy Control": 0.732807,
+        "Alzheimer's Disease": 0.267194
+      }
+    },
+    {
+      "window_index": 16,
+      "start_sec": 80.0,
+      "end_sec": 85.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.64374,
+      "class_probabilities": {
+        "Healthy Control": 0.64374,
+        "Alzheimer's Disease": 0.356261
+      }
+    },
+    {
+      "window_index": 17,
+      "start_sec": 85.0,
+      "end_sec": 90.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.675246,
+      "class_probabilities": {
+        "Healthy Control": 0.675246,
+        "Alzheimer's Disease": 0.324754
+      }
+    },
+    {
+      "window_index": 18,
+      "start_sec": 90.0,
+      "end_sec": 95.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.715646,
+      "class_probabilities": {
+        "Healthy Control": 0.715646,
+        "Alzheimer's Disease": 0.284354
+      }
+    },
+    {
+      "window_index": 19,
+      "start_sec": 95.0,
+      "end_sec": 100.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.585756,
+      "class_probabilities": {
+        "Healthy Control": 0.414245,
+        "Alzheimer's Disease": 0.585756
+      }
+    },
+    {
+      "window_index": 20,
+      "start_sec": 100.0,
+      "end_sec": 105.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.549839,
+      "class_probabilities": {
+        "Healthy Control": 0.549839,
+        "Alzheimer's Disease": 0.450161
+      }
+    },
+    {
+      "window_index": 21,
+      "start_sec": 105.0,
+      "end_sec": 110.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.574692,
+      "class_probabilities": {
+        "Healthy Control": 0.574692,
+        "Alzheimer's Disease": 0.425308
+      }
+    },
+    {
+      "window_index": 22,
+      "start_sec": 110.0,
+      "end_sec": 115.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.533316,
+      "class_probabilities": {
+        "Healthy Control": 0.533316,
+        "Alzheimer's Disease": 0.466684
+      }
+    },
+    {
+      "window_index": 23,
+      "start_sec": 115.0,
+      "end_sec": 120.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.807847,
+      "class_probabilities": {
+        "Healthy Control": 0.192153,
+        "Alzheimer's Disease": 0.807847
+      }
+    },
+    {
+      "window_index": 24,
+      "start_sec": 120.0,
+      "end_sec": 125.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.805765,
+      "class_probabilities": {
+        "Healthy Control": 0.805765,
+        "Alzheimer's Disease": 0.194235
+      }
+    },
+    {
+      "window_index": 25,
+      "start_sec": 125.0,
+      "end_sec": 130.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.785154,
+      "class_probabilities": {
+        "Healthy Control": 0.785154,
+        "Alzheimer's Disease": 0.214846
+      }
+    },
+    {
+      "window_index": 26,
+      "start_sec": 130.0,
+      "end_sec": 135.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.937977,
+      "class_probabilities": {
+        "Healthy Control": 0.937977,
+        "Alzheimer's Disease": 0.062023
+      }
+    },
+    {
+      "window_index": 27,
+      "start_sec": 135.0,
+      "end_sec": 140.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.784355,
+      "class_probabilities": {
+        "Healthy Control": 0.784355,
+        "Alzheimer's Disease": 0.215645
+      }
+    },
+    {
+      "window_index": 28,
+      "start_sec": 140.0,
+      "end_sec": 145.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.884674,
+      "class_probabilities": {
+        "Healthy Control": 0.884674,
+        "Alzheimer's Disease": 0.115326
+      }
+    },
+    {
+      "window_index": 29,
+      "start_sec": 145.0,
+      "end_sec": 150.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.662281,
+      "class_probabilities": {
+        "Healthy Control": 0.662281,
+        "Alzheimer's Disease": 0.337719
+      }
+    },
+    {
+      "window_index": 30,
+      "start_sec": 150.0,
+      "end_sec": 155.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.708225,
+      "class_probabilities": {
+        "Healthy Control": 0.708225,
+        "Alzheimer's Disease": 0.291775
+      }
+    },
+    {
+      "window_index": 31,
+      "start_sec": 155.0,
+      "end_sec": 160.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.58028,
+      "class_probabilities": {
+        "Healthy Control": 0.58028,
+        "Alzheimer's Disease": 0.41972
+      }
+    },
+    {
+      "window_index": 32,
+      "start_sec": 160.0,
+      "end_sec": 165.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.721153,
+      "class_probabilities": {
+        "Healthy Control": 0.721153,
+        "Alzheimer's Disease": 0.278847
+      }
+    },
+    {
+      "window_index": 33,
+      "start_sec": 165.0,
+      "end_sec": 170.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.524245,
+      "class_probabilities": {
+        "Healthy Control": 0.524245,
+        "Alzheimer's Disease": 0.475755
+      }
+    },
+    {
+      "window_index": 34,
+      "start_sec": 170.0,
+      "end_sec": 175.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.504399,
+      "class_probabilities": {
+        "Healthy Control": 0.495601,
+        "Alzheimer's Disease": 0.504399
+      }
+    },
+    {
+      "window_index": 35,
+      "start_sec": 175.0,
+      "end_sec": 180.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.625157,
+      "class_probabilities": {
+        "Healthy Control": 0.374843,
+        "Alzheimer's Disease": 0.625157
+      }
+    },
+    {
+      "window_index": 36,
+      "start_sec": 180.0,
+      "end_sec": 185.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.60643,
+      "class_probabilities": {
+        "Healthy Control": 0.60643,
+        "Alzheimer's Disease": 0.39357
+      }
+    },
+    {
+      "window_index": 37,
+      "start_sec": 185.0,
+      "end_sec": 190.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.570894,
+      "class_probabilities": {
+        "Healthy Control": 0.570894,
+        "Alzheimer's Disease": 0.429106
+      }
+    },
+    {
+      "window_index": 38,
+      "start_sec": 190.0,
+      "end_sec": 195.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.581889,
+      "class_probabilities": {
+        "Healthy Control": 0.581889,
+        "Alzheimer's Disease": 0.418111
+      }
+    },
+    {
+      "window_index": 39,
+      "start_sec": 195.0,
+      "end_sec": 200.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.601401,
+      "class_probabilities": {
+        "Healthy Control": 0.601401,
+        "Alzheimer's Disease": 0.398599
+      }
+    },
+    {
+      "window_index": 40,
+      "start_sec": 200.0,
+      "end_sec": 205.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.659841,
+      "class_probabilities": {
+        "Healthy Control": 0.659841,
+        "Alzheimer's Disease": 0.340159
+      }
+    },
+    {
+      "window_index": 41,
+      "start_sec": 205.0,
+      "end_sec": 210.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.718476,
+      "class_probabilities": {
+        "Healthy Control": 0.718476,
+        "Alzheimer's Disease": 0.281524
+      }
+    },
+    {
+      "window_index": 42,
+      "start_sec": 210.0,
+      "end_sec": 215.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.71715,
+      "class_probabilities": {
+        "Healthy Control": 0.71715,
+        "Alzheimer's Disease": 0.28285
+      }
+    },
+    {
+      "window_index": 43,
+      "start_sec": 215.0,
+      "end_sec": 220.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.744638,
+      "class_probabilities": {
+        "Healthy Control": 0.744638,
+        "Alzheimer's Disease": 0.255362
+      }
+    },
+    {
+      "window_index": 44,
+      "start_sec": 220.0,
+      "end_sec": 225.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.791223,
+      "class_probabilities": {
+        "Healthy Control": 0.791223,
+        "Alzheimer's Disease": 0.208777
+      }
+    },
+    {
+      "window_index": 45,
+      "start_sec": 225.0,
+      "end_sec": 230.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.50755,
+      "class_probabilities": {
+        "Healthy Control": 0.49245,
+        "Alzheimer's Disease": 0.50755
+      }
+    },
+    {
+      "window_index": 46,
+      "start_sec": 230.0,
+      "end_sec": 235.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.759801,
+      "class_probabilities": {
+        "Healthy Control": 0.759801,
+        "Alzheimer's Disease": 0.240199
+      }
+    },
+    {
+      "window_index": 47,
+      "start_sec": 235.0,
+      "end_sec": 240.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.690478,
+      "class_probabilities": {
+        "Healthy Control": 0.690478,
+        "Alzheimer's Disease": 0.309522
+      }
+    },
+    {
+      "window_index": 48,
+      "start_sec": 240.0,
+      "end_sec": 245.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.639892,
+      "class_probabilities": {
+        "Healthy Control": 0.639892,
+        "Alzheimer's Disease": 0.360108
+      }
+    },
+    {
+      "window_index": 49,
+      "start_sec": 245.0,
+      "end_sec": 250.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.649248,
+      "class_probabilities": {
+        "Healthy Control": 0.649248,
+        "Alzheimer's Disease": 0.350752
+      }
+    },
+    {
+      "window_index": 50,
+      "start_sec": 250.0,
+      "end_sec": 255.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.963559,
+      "class_probabilities": {
+        "Healthy Control": 0.963559,
+        "Alzheimer's Disease": 0.036441
+      }
+    },
+    {
+      "window_index": 51,
+      "start_sec": 255.0,
+      "end_sec": 260.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.712155,
+      "class_probabilities": {
+        "Healthy Control": 0.712155,
+        "Alzheimer's Disease": 0.287845
+      }
+    },
+    {
+      "window_index": 52,
+      "start_sec": 260.0,
+      "end_sec": 265.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.567546,
+      "class_probabilities": {
+        "Healthy Control": 0.567546,
+        "Alzheimer's Disease": 0.432454
+      }
+    },
+    {
+      "window_index": 53,
+      "start_sec": 265.0,
+      "end_sec": 270.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.723215,
+      "class_probabilities": {
+        "Healthy Control": 0.723215,
+        "Alzheimer's Disease": 0.276785
+      }
+    },
+    {
+      "window_index": 54,
+      "start_sec": 270.0,
+      "end_sec": 275.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.705137,
+      "class_probabilities": {
+        "Healthy Control": 0.705137,
+        "Alzheimer's Disease": 0.294863
+      }
+    },
+    {
+      "window_index": 55,
+      "start_sec": 275.0,
+      "end_sec": 280.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.643831,
+      "class_probabilities": {
+        "Healthy Control": 0.643831,
+        "Alzheimer's Disease": 0.356169
+      }
+    },
+    {
+      "window_index": 56,
+      "start_sec": 280.0,
+      "end_sec": 285.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.908513,
+      "class_probabilities": {
+        "Healthy Control": 0.908513,
+        "Alzheimer's Disease": 0.091487
+      }
+    },
+    {
+      "window_index": 57,
+      "start_sec": 285.0,
+      "end_sec": 290.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.843818,
+      "class_probabilities": {
+        "Healthy Control": 0.843818,
+        "Alzheimer's Disease": 0.156182
+      }
+    },
+    {
+      "window_index": 58,
+      "start_sec": 290.0,
+      "end_sec": 295.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.739752,
+      "class_probabilities": {
+        "Healthy Control": 0.739752,
+        "Alzheimer's Disease": 0.260248
+      }
+    },
+    {
+      "window_index": 59,
+      "start_sec": 295.0,
+      "end_sec": 300.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.816894,
+      "class_probabilities": {
+        "Healthy Control": 0.816894,
+        "Alzheimer's Disease": 0.183106
+      }
+    },
+    {
+      "window_index": 60,
+      "start_sec": 300.0,
+      "end_sec": 305.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.894206,
+      "class_probabilities": {
+        "Healthy Control": 0.894206,
+        "Alzheimer's Disease": 0.105794
+      }
+    },
+    {
+      "window_index": 61,
+      "start_sec": 305.0,
+      "end_sec": 310.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.768408,
+      "class_probabilities": {
+        "Healthy Control": 0.768408,
+        "Alzheimer's Disease": 0.231592
+      }
+    },
+    {
+      "window_index": 62,
+      "start_sec": 310.0,
+      "end_sec": 315.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.82486,
+      "class_probabilities": {
+        "Healthy Control": 0.82486,
+        "Alzheimer's Disease": 0.17514
+      }
+    },
+    {
+      "window_index": 63,
+      "start_sec": 315.0,
+      "end_sec": 320.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.745042,
+      "class_probabilities": {
+        "Healthy Control": 0.745042,
+        "Alzheimer's Disease": 0.254958
+      }
+    },
+    {
+      "window_index": 64,
+      "start_sec": 320.0,
+      "end_sec": 325.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.715688,
+      "class_probabilities": {
+        "Healthy Control": 0.715688,
+        "Alzheimer's Disease": 0.284312
+      }
+    },
+    {
+      "window_index": 65,
+      "start_sec": 325.0,
+      "end_sec": 330.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.85007,
+      "class_probabilities": {
+        "Healthy Control": 0.85007,
+        "Alzheimer's Disease": 0.14993
+      }
+    },
+    {
+      "window_index": 66,
+      "start_sec": 330.0,
+      "end_sec": 335.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.912117,
+      "class_probabilities": {
+        "Healthy Control": 0.912117,
+        "Alzheimer's Disease": 0.087883
+      }
+    },
+    {
+      "window_index": 67,
+      "start_sec": 335.0,
+      "end_sec": 340.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.946052,
+      "class_probabilities": {
+        "Healthy Control": 0.946052,
+        "Alzheimer's Disease": 0.053948
+      }
+    },
+    {
+      "window_index": 68,
+      "start_sec": 340.0,
+      "end_sec": 345.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.789926,
+      "class_probabilities": {
+        "Healthy Control": 0.789926,
+        "Alzheimer's Disease": 0.210074
+      }
+    },
+    {
+      "window_index": 69,
+      "start_sec": 345.0,
+      "end_sec": 350.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.943457,
+      "class_probabilities": {
+        "Healthy Control": 0.943457,
+        "Alzheimer's Disease": 0.056543
+      }
+    },
+    {
+      "window_index": 70,
+      "start_sec": 350.0,
+      "end_sec": 355.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.924838,
+      "class_probabilities": {
+        "Healthy Control": 0.924838,
+        "Alzheimer's Disease": 0.075162
+      }
+    },
+    {
+      "window_index": 71,
+      "start_sec": 355.0,
+      "end_sec": 360.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.809368,
+      "class_probabilities": {
+        "Healthy Control": 0.809368,
+        "Alzheimer's Disease": 0.190632
+      }
+    },
+    {
+      "window_index": 72,
+      "start_sec": 360.0,
+      "end_sec": 365.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.925622,
+      "class_probabilities": {
+        "Healthy Control": 0.925622,
+        "Alzheimer's Disease": 0.074379
+      }
+    },
+    {
+      "window_index": 73,
+      "start_sec": 365.0,
+      "end_sec": 370.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.94552,
+      "class_probabilities": {
+        "Healthy Control": 0.94552,
+        "Alzheimer's Disease": 0.05448
+      }
+    },
+    {
+      "window_index": 74,
+      "start_sec": 370.0,
+      "end_sec": 375.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.906261,
+      "class_probabilities": {
+        "Healthy Control": 0.906261,
+        "Alzheimer's Disease": 0.093739
+      }
+    },
+    {
+      "window_index": 75,
+      "start_sec": 375.0,
+      "end_sec": 380.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.844754,
+      "class_probabilities": {
+        "Healthy Control": 0.844754,
+        "Alzheimer's Disease": 0.155246
+      }
+    },
+    {
+      "window_index": 76,
+      "start_sec": 380.0,
+      "end_sec": 385.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.865987,
+      "class_probabilities": {
+        "Healthy Control": 0.865987,
+        "Alzheimer's Disease": 0.134013
+      }
+    },
+    {
+      "window_index": 77,
+      "start_sec": 385.0,
+      "end_sec": 390.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.977112,
+      "class_probabilities": {
+        "Healthy Control": 0.977112,
+        "Alzheimer's Disease": 0.022888
+      }
+    },
+    {
+      "window_index": 78,
+      "start_sec": 390.0,
+      "end_sec": 395.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.899988,
+      "class_probabilities": {
+        "Healthy Control": 0.899988,
+        "Alzheimer's Disease": 0.100012
+      }
+    },
+    {
+      "window_index": 79,
+      "start_sec": 395.0,
+      "end_sec": 400.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.953208,
+      "class_probabilities": {
+        "Healthy Control": 0.953208,
+        "Alzheimer's Disease": 0.046792
+      }
+    },
+    {
+      "window_index": 80,
+      "start_sec": 400.0,
+      "end_sec": 405.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.891087,
+      "class_probabilities": {
+        "Healthy Control": 0.891087,
+        "Alzheimer's Disease": 0.108913
+      }
+    },
+    {
+      "window_index": 81,
+      "start_sec": 405.0,
+      "end_sec": 410.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.869758,
+      "class_probabilities": {
+        "Healthy Control": 0.869758,
+        "Alzheimer's Disease": 0.130242
+      }
+    },
+    {
+      "window_index": 82,
+      "start_sec": 410.0,
+      "end_sec": 415.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.723505,
+      "class_probabilities": {
+        "Healthy Control": 0.723505,
+        "Alzheimer's Disease": 0.276494
+      }
+    },
+    {
+      "window_index": 83,
+      "start_sec": 415.0,
+      "end_sec": 420.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.934955,
+      "class_probabilities": {
+        "Healthy Control": 0.934955,
+        "Alzheimer's Disease": 0.065045
+      }
+    },
+    {
+      "window_index": 84,
+      "start_sec": 420.0,
+      "end_sec": 425.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.96002,
+      "class_probabilities": {
+        "Healthy Control": 0.96002,
+        "Alzheimer's Disease": 0.03998
+      }
+    },
+    {
+      "window_index": 85,
+      "start_sec": 425.0,
+      "end_sec": 430.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.960292,
+      "class_probabilities": {
+        "Healthy Control": 0.960292,
+        "Alzheimer's Disease": 0.039708
+      }
+    },
+    {
+      "window_index": 86,
+      "start_sec": 430.0,
+      "end_sec": 435.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.942938,
+      "class_probabilities": {
+        "Healthy Control": 0.942938,
+        "Alzheimer's Disease": 0.057062
+      }
+    },
+    {
+      "window_index": 87,
+      "start_sec": 435.0,
+      "end_sec": 440.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.929348,
+      "class_probabilities": {
+        "Healthy Control": 0.929348,
+        "Alzheimer's Disease": 0.070652
+      }
+    },
+    {
+      "window_index": 88,
+      "start_sec": 440.0,
+      "end_sec": 445.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.979347,
+      "class_probabilities": {
+        "Healthy Control": 0.979347,
+        "Alzheimer's Disease": 0.020653
+      }
+    },
+    {
+      "window_index": 89,
+      "start_sec": 445.0,
+      "end_sec": 450.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.941959,
+      "class_probabilities": {
+        "Healthy Control": 0.941959,
+        "Alzheimer's Disease": 0.058041
+      }
+    },
+    {
+      "window_index": 90,
+      "start_sec": 450.0,
+      "end_sec": 455.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.932032,
+      "class_probabilities": {
+        "Healthy Control": 0.932032,
+        "Alzheimer's Disease": 0.067968
+      }
+    },
+    {
+      "window_index": 91,
+      "start_sec": 455.0,
+      "end_sec": 460.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.954347,
+      "class_probabilities": {
+        "Healthy Control": 0.954347,
+        "Alzheimer's Disease": 0.045653
+      }
+    },
+    {
+      "window_index": 92,
+      "start_sec": 460.0,
+      "end_sec": 465.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.883263,
+      "class_probabilities": {
+        "Healthy Control": 0.883263,
+        "Alzheimer's Disease": 0.116737
+      }
+    },
+    {
+      "window_index": 93,
+      "start_sec": 465.0,
+      "end_sec": 470.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.902972,
+      "class_probabilities": {
+        "Healthy Control": 0.902972,
+        "Alzheimer's Disease": 0.097028
+      }
+    },
+    {
+      "window_index": 94,
+      "start_sec": 470.0,
+      "end_sec": 475.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.890448,
+      "class_probabilities": {
+        "Healthy Control": 0.890448,
+        "Alzheimer's Disease": 0.109552
+      }
+    },
+    {
+      "window_index": 95,
+      "start_sec": 475.0,
+      "end_sec": 480.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.945899,
+      "class_probabilities": {
+        "Healthy Control": 0.945899,
+        "Alzheimer's Disease": 0.054101
+      }
+    },
+    {
+      "window_index": 96,
+      "start_sec": 480.0,
+      "end_sec": 485.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.962535,
+      "class_probabilities": {
+        "Healthy Control": 0.962535,
+        "Alzheimer's Disease": 0.037465
+      }
+    },
+    {
+      "window_index": 97,
+      "start_sec": 485.0,
+      "end_sec": 490.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.9626,
+      "class_probabilities": {
+        "Healthy Control": 0.9626,
+        "Alzheimer's Disease": 0.0374
+      }
+    },
+    {
+      "window_index": 98,
+      "start_sec": 490.0,
+      "end_sec": 495.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.970302,
+      "class_probabilities": {
+        "Healthy Control": 0.970302,
+        "Alzheimer's Disease": 0.029698
+      }
+    },
+    {
+      "window_index": 99,
+      "start_sec": 495.0,
+      "end_sec": 500.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.974867,
+      "class_probabilities": {
+        "Healthy Control": 0.974867,
+        "Alzheimer's Disease": 0.025133
+      }
+    },
+    {
+      "window_index": 100,
+      "start_sec": 500.0,
+      "end_sec": 505.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.942713,
+      "class_probabilities": {
+        "Healthy Control": 0.942713,
+        "Alzheimer's Disease": 0.057287
+      }
+    },
+    {
+      "window_index": 101,
+      "start_sec": 505.0,
+      "end_sec": 510.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.809976,
+      "class_probabilities": {
+        "Healthy Control": 0.809976,
+        "Alzheimer's Disease": 0.190024
+      }
+    },
+    {
+      "window_index": 102,
+      "start_sec": 510.0,
+      "end_sec": 515.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.910629,
+      "class_probabilities": {
+        "Healthy Control": 0.910629,
+        "Alzheimer's Disease": 0.089371
+      }
+    },
+    {
+      "window_index": 103,
+      "start_sec": 515.0,
+      "end_sec": 520.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.966075,
+      "class_probabilities": {
+        "Healthy Control": 0.966075,
+        "Alzheimer's Disease": 0.033925
+      }
+    },
+    {
+      "window_index": 104,
+      "start_sec": 520.0,
+      "end_sec": 525.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.954255,
+      "class_probabilities": {
+        "Healthy Control": 0.954255,
+        "Alzheimer's Disease": 0.045745
+      }
+    },
+    {
+      "window_index": 105,
+      "start_sec": 525.0,
+      "end_sec": 530.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.973532,
+      "class_probabilities": {
+        "Healthy Control": 0.973532,
+        "Alzheimer's Disease": 0.026468
+      }
+    },
+    {
+      "window_index": 106,
+      "start_sec": 530.0,
+      "end_sec": 535.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.958161,
+      "class_probabilities": {
+        "Healthy Control": 0.958161,
+        "Alzheimer's Disease": 0.041839
+      }
+    },
+    {
+      "window_index": 107,
+      "start_sec": 535.0,
+      "end_sec": 540.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.967082,
+      "class_probabilities": {
+        "Healthy Control": 0.967082,
+        "Alzheimer's Disease": 0.032918
+      }
+    },
+    {
+      "window_index": 108,
+      "start_sec": 540.0,
+      "end_sec": 545.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.926037,
+      "class_probabilities": {
+        "Healthy Control": 0.926037,
+        "Alzheimer's Disease": 0.073963
+      }
+    },
+    {
+      "window_index": 109,
+      "start_sec": 545.0,
+      "end_sec": 550.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.97299,
+      "class_probabilities": {
+        "Healthy Control": 0.97299,
+        "Alzheimer's Disease": 0.02701
+      }
+    },
+    {
+      "window_index": 110,
+      "start_sec": 550.0,
+      "end_sec": 555.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.891998,
+      "class_probabilities": {
+        "Healthy Control": 0.891998,
+        "Alzheimer's Disease": 0.108002
+      }
+    },
+    {
+      "window_index": 111,
+      "start_sec": 555.0,
+      "end_sec": 560.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.955045,
+      "class_probabilities": {
+        "Healthy Control": 0.955045,
+        "Alzheimer's Disease": 0.044955
+      }
+    },
+    {
+      "window_index": 112,
+      "start_sec": 560.0,
+      "end_sec": 565.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.907086,
+      "class_probabilities": {
+        "Healthy Control": 0.907086,
+        "Alzheimer's Disease": 0.092914
+      }
+    },
+    {
+      "window_index": 113,
+      "start_sec": 565.0,
+      "end_sec": 570.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.938547,
+      "class_probabilities": {
+        "Healthy Control": 0.938547,
+        "Alzheimer's Disease": 0.061453
+      }
+    },
+    {
+      "window_index": 114,
+      "start_sec": 570.0,
+      "end_sec": 575.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.879304,
+      "class_probabilities": {
+        "Healthy Control": 0.879304,
+        "Alzheimer's Disease": 0.120696
+      }
+    },
+    {
+      "window_index": 115,
+      "start_sec": 575.0,
+      "end_sec": 580.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.654333,
+      "class_probabilities": {
+        "Healthy Control": 0.654333,
+        "Alzheimer's Disease": 0.345667
+      }
+    },
+    {
+      "window_index": 116,
+      "start_sec": 580.0,
+      "end_sec": 585.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.915658,
+      "class_probabilities": {
+        "Healthy Control": 0.915658,
+        "Alzheimer's Disease": 0.084342
+      }
+    },
+    {
+      "window_index": 117,
+      "start_sec": 585.0,
+      "end_sec": 590.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.945454,
+      "class_probabilities": {
+        "Healthy Control": 0.945454,
+        "Alzheimer's Disease": 0.054546
+      }
+    },
+    {
+      "window_index": 118,
+      "start_sec": 590.0,
+      "end_sec": 595.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.964267,
+      "class_probabilities": {
+        "Healthy Control": 0.964267,
+        "Alzheimer's Disease": 0.035733
+      }
+    },
+    {
+      "window_index": 119,
+      "start_sec": 595.0,
+      "end_sec": 600.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.905323,
+      "class_probabilities": {
+        "Healthy Control": 0.905323,
+        "Alzheimer's Disease": 0.094677
+      }
+    },
+    {
+      "window_index": 120,
+      "start_sec": 600.0,
+      "end_sec": 605.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.880514,
+      "class_probabilities": {
+        "Healthy Control": 0.880514,
+        "Alzheimer's Disease": 0.119486
+      }
+    },
+    {
+      "window_index": 121,
+      "start_sec": 605.0,
+      "end_sec": 610.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.948716,
+      "class_probabilities": {
+        "Healthy Control": 0.948716,
+        "Alzheimer's Disease": 0.051283
+      }
+    },
+    {
+      "window_index": 122,
+      "start_sec": 610.0,
+      "end_sec": 615.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.948811,
+      "class_probabilities": {
+        "Healthy Control": 0.948811,
+        "Alzheimer's Disease": 0.051189
+      }
+    },
+    {
+      "window_index": 123,
+      "start_sec": 615.0,
+      "end_sec": 620.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.923268,
+      "class_probabilities": {
+        "Healthy Control": 0.923268,
+        "Alzheimer's Disease": 0.076732
+      }
+    },
+    {
+      "window_index": 124,
+      "start_sec": 620.0,
+      "end_sec": 625.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.775988,
+      "class_probabilities": {
+        "Healthy Control": 0.775988,
+        "Alzheimer's Disease": 0.224012
+      }
+    },
+    {
+      "window_index": 125,
+      "start_sec": 625.0,
+      "end_sec": 630.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.916363,
+      "class_probabilities": {
+        "Healthy Control": 0.916363,
+        "Alzheimer's Disease": 0.083637
+      }
+    },
+    {
+      "window_index": 126,
+      "start_sec": 630.0,
+      "end_sec": 635.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.583308,
+      "class_probabilities": {
+        "Healthy Control": 0.583308,
+        "Alzheimer's Disease": 0.416692
+      }
+    },
+    {
+      "window_index": 127,
+      "start_sec": 635.0,
+      "end_sec": 640.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.841015,
+      "class_probabilities": {
+        "Healthy Control": 0.841015,
+        "Alzheimer's Disease": 0.158985
+      }
+    },
+    {
+      "window_index": 128,
+      "start_sec": 640.0,
+      "end_sec": 645.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.972354,
+      "class_probabilities": {
+        "Healthy Control": 0.972354,
+        "Alzheimer's Disease": 0.027646
+      }
+    },
+    {
+      "window_index": 129,
+      "start_sec": 645.0,
+      "end_sec": 650.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.872741,
+      "class_probabilities": {
+        "Healthy Control": 0.872741,
+        "Alzheimer's Disease": 0.127259
+      }
+    },
+    {
+      "window_index": 130,
+      "start_sec": 650.0,
+      "end_sec": 655.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.878462,
+      "class_probabilities": {
+        "Healthy Control": 0.878462,
+        "Alzheimer's Disease": 0.121538
+      }
+    },
+    {
+      "window_index": 131,
+      "start_sec": 655.0,
+      "end_sec": 660.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.776203,
+      "class_probabilities": {
+        "Healthy Control": 0.776203,
+        "Alzheimer's Disease": 0.223797
+      }
+    },
+    {
+      "window_index": 132,
+      "start_sec": 660.0,
+      "end_sec": 665.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.909928,
+      "class_probabilities": {
+        "Healthy Control": 0.909928,
+        "Alzheimer's Disease": 0.090072
+      }
+    },
+    {
+      "window_index": 133,
+      "start_sec": 665.0,
+      "end_sec": 670.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.9574,
+      "class_probabilities": {
+        "Healthy Control": 0.9574,
+        "Alzheimer's Disease": 0.0426
+      }
+    },
+    {
+      "window_index": 134,
+      "start_sec": 670.0,
+      "end_sec": 675.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.932792,
+      "class_probabilities": {
+        "Healthy Control": 0.932792,
+        "Alzheimer's Disease": 0.067208
+      }
+    },
+    {
+      "window_index": 135,
+      "start_sec": 675.0,
+      "end_sec": 680.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.933698,
+      "class_probabilities": {
+        "Healthy Control": 0.933698,
+        "Alzheimer's Disease": 0.066302
+      }
+    },
+    {
+      "window_index": 136,
+      "start_sec": 680.0,
+      "end_sec": 685.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.938484,
+      "class_probabilities": {
+        "Healthy Control": 0.938484,
+        "Alzheimer's Disease": 0.061516
+      }
+    },
+    {
+      "window_index": 137,
+      "start_sec": 685.0,
+      "end_sec": 690.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.848904,
+      "class_probabilities": {
+        "Healthy Control": 0.848904,
+        "Alzheimer's Disease": 0.151096
+      }
+    },
+    {
+      "window_index": 138,
+      "start_sec": 690.0,
+      "end_sec": 695.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.634343,
+      "class_probabilities": {
+        "Healthy Control": 0.634343,
+        "Alzheimer's Disease": 0.365658
+      }
+    },
+    {
+      "window_index": 139,
+      "start_sec": 695.0,
+      "end_sec": 700.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.887237,
+      "class_probabilities": {
+        "Healthy Control": 0.887237,
+        "Alzheimer's Disease": 0.112762
+      }
+    },
+    {
+      "window_index": 140,
+      "start_sec": 700.0,
+      "end_sec": 705.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.922875,
+      "class_probabilities": {
+        "Healthy Control": 0.922875,
+        "Alzheimer's Disease": 0.077125
+      }
+    },
+    {
+      "window_index": 141,
+      "start_sec": 705.0,
+      "end_sec": 710.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.87311,
+      "class_probabilities": {
+        "Healthy Control": 0.87311,
+        "Alzheimer's Disease": 0.12689
+      }
+    },
+    {
+      "window_index": 142,
+      "start_sec": 710.0,
+      "end_sec": 715.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.948416,
+      "class_probabilities": {
+        "Healthy Control": 0.948416,
+        "Alzheimer's Disease": 0.051584
+      }
+    },
+    {
+      "window_index": 143,
+      "start_sec": 715.0,
+      "end_sec": 720.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.842674,
+      "class_probabilities": {
+        "Healthy Control": 0.842674,
+        "Alzheimer's Disease": 0.157326
+      }
+    },
+    {
+      "window_index": 144,
+      "start_sec": 720.0,
+      "end_sec": 725.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.938489,
+      "class_probabilities": {
+        "Healthy Control": 0.938489,
+        "Alzheimer's Disease": 0.061511
+      }
+    },
+    {
+      "window_index": 145,
+      "start_sec": 725.0,
+      "end_sec": 730.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.854095,
+      "class_probabilities": {
+        "Healthy Control": 0.854095,
+        "Alzheimer's Disease": 0.145905
+      }
+    },
+    {
+      "window_index": 146,
+      "start_sec": 730.0,
+      "end_sec": 735.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.903865,
+      "class_probabilities": {
+        "Healthy Control": 0.903865,
+        "Alzheimer's Disease": 0.096135
+      }
+    },
+    {
+      "window_index": 147,
+      "start_sec": 735.0,
+      "end_sec": 740.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.929438,
+      "class_probabilities": {
+        "Healthy Control": 0.929438,
+        "Alzheimer's Disease": 0.070562
+      }
+    },
+    {
+      "window_index": 148,
+      "start_sec": 740.0,
+      "end_sec": 745.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.859519,
+      "class_probabilities": {
+        "Healthy Control": 0.859519,
+        "Alzheimer's Disease": 0.140481
+      }
+    },
+    {
+      "window_index": 149,
+      "start_sec": 745.0,
+      "end_sec": 750.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.78761,
+      "class_probabilities": {
+        "Healthy Control": 0.78761,
+        "Alzheimer's Disease": 0.21239
+      }
+    },
+    {
+      "window_index": 150,
+      "start_sec": 750.0,
+      "end_sec": 755.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.940647,
+      "class_probabilities": {
+        "Healthy Control": 0.940647,
+        "Alzheimer's Disease": 0.059353
+      }
+    },
+    {
+      "window_index": 151,
+      "start_sec": 755.0,
+      "end_sec": 760.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.914316,
+      "class_probabilities": {
+        "Healthy Control": 0.914316,
+        "Alzheimer's Disease": 0.085684
+      }
+    },
+    {
+      "window_index": 152,
+      "start_sec": 760.0,
+      "end_sec": 765.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.796572,
+      "class_probabilities": {
+        "Healthy Control": 0.796572,
+        "Alzheimer's Disease": 0.203428
+      }
+    },
+    {
+      "window_index": 153,
+      "start_sec": 765.0,
+      "end_sec": 770.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.780477,
+      "class_probabilities": {
+        "Healthy Control": 0.780477,
+        "Alzheimer's Disease": 0.219523
+      }
+    },
+    {
+      "window_index": 154,
+      "start_sec": 770.0,
+      "end_sec": 775.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.899527,
+      "class_probabilities": {
+        "Healthy Control": 0.899527,
+        "Alzheimer's Disease": 0.100473
+      }
+    },
+    {
+      "window_index": 155,
+      "start_sec": 775.0,
+      "end_sec": 780.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.957602,
+      "class_probabilities": {
+        "Healthy Control": 0.957602,
+        "Alzheimer's Disease": 0.042398
+      }
+    },
+    {
+      "window_index": 156,
+      "start_sec": 780.0,
+      "end_sec": 785.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.871075,
+      "class_probabilities": {
+        "Healthy Control": 0.871075,
+        "Alzheimer's Disease": 0.128925
+      }
+    },
+    {
+      "window_index": 157,
+      "start_sec": 785.0,
+      "end_sec": 790.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.641339,
+      "class_probabilities": {
+        "Healthy Control": 0.641339,
+        "Alzheimer's Disease": 0.358661
+      }
+    },
+    {
+      "window_index": 158,
+      "start_sec": 790.0,
+      "end_sec": 795.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.958178,
+      "class_probabilities": {
+        "Healthy Control": 0.958178,
+        "Alzheimer's Disease": 0.041822
+      }
+    },
+    {
+      "window_index": 159,
+      "start_sec": 795.0,
+      "end_sec": 800.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.769289,
+      "class_probabilities": {
+        "Healthy Control": 0.769289,
+        "Alzheimer's Disease": 0.230711
+      }
+    },
+    {
+      "window_index": 160,
+      "start_sec": 800.0,
+      "end_sec": 805.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.939514,
+      "class_probabilities": {
+        "Healthy Control": 0.939514,
+        "Alzheimer's Disease": 0.060486
+      }
+    },
+    {
+      "window_index": 161,
+      "start_sec": 805.0,
+      "end_sec": 810.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.884424,
+      "class_probabilities": {
+        "Healthy Control": 0.884424,
+        "Alzheimer's Disease": 0.115576
+      }
+    },
+    {
+      "window_index": 162,
+      "start_sec": 810.0,
+      "end_sec": 815.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.724763,
+      "class_probabilities": {
+        "Healthy Control": 0.724763,
+        "Alzheimer's Disease": 0.275236
+      }
+    },
+    {
+      "window_index": 163,
+      "start_sec": 815.0,
+      "end_sec": 820.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.817093,
+      "class_probabilities": {
+        "Healthy Control": 0.817093,
+        "Alzheimer's Disease": 0.182907
+      }
+    }
+  ]
+}

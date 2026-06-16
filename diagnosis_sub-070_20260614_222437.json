@@ -1,0 +1,1265 @@
+{
+  "timestamp": "2026-06-14T22:24:37.079320",
+  "source": {
+    "type": "holdout",
+    "subject_id": "sub-070",
+    "true_label": "Frontotemporal Dementia"
+  },
+  "recording": {
+    "sampling_frequency_hz": 500.0,
+    "num_channels": 19,
+    "channel_names": [
+      "Fp1",
+      "Fp2",
+      "F7",
+      "F3",
+      "Fz",
+      "F4",
+      "F8",
+      "T3",
+      "C3",
+      "Cz",
+      "C4",
+      "T4",
+      "T5",
+      "P3",
+      "Pz",
+      "P4",
+      "T6",
+      "O1",
+      "O2"
+    ],
+    "num_windows": 95
+  },
+  "inference_parameters": {
+    "checkpoint": "gat_3class_topo_best.pt",
+    "window_duration_sec": 5.0,
+    "plv_threshold": 0.5,
+    "apply_filter": true,
+    "apply_ica": false,
+    "batch_size": 16,
+    "connectivity_type": "functional",
+    "connectivity_type_label": "Functional (PLV synchronization)",
+    "connectivity_type_requested": "auto"
+  },
+  "model": {
+    "model_name": "GAT",
+    "hidden_channels": 32,
+    "dropout": 0.6,
+    "num_node_features": 4,
+    "num_classes": 3,
+    "classification_mode": "three_class",
+    "trained_connectivity_type": "functional",
+    "class_labels": {
+      "0": "Healthy Control",
+      "1": "Alzheimer's Disease",
+      "2": "Frontotemporal Dementia"
+    },
+    "training_epoch": 49,
+    "training_metrics": {
+      "accuracy": 0.6045005114217524,
+      "macro_precision": 0.5461902839098699,
+      "macro_recall": 0.6304372573927636,
+      "macro_f1": 0.5545514797223962,
+      "per_class_precision": {
+        "0": 0.369620253164557,
+        "1": 0.7732847199204508,
+        "2": 0.49566587864460204
+      },
+      "per_class_recall": {
+        "0": 0.8390804597701149,
+        "1": 0.6405820977484898,
+        "2": 0.41164921465968585
+      },
+      "per_class_f1": {
+        "0": 0.5131810193321616,
+        "1": 0.700705811683436,
+        "2": 0.44976760815159095
+      },
+      "confusion_matrix": [
+        [
+          584,
+          70,
+          42
+        ],
+        [
+          711,
+          2333,
+          598
+        ],
+        [
+          285,
+          614,
+          629
+        ]
+      ],
+      "num_samples": 5866
+    },
+    "gat_heads_first_layer": 4,
+    "gat_heads_second_layer": 1
+  },
+  "results": {
+    "final_label": "Alzheimer's Disease",
+    "final_confidence": 0.411068,
+    "num_windows": 95,
+    "connectivity_type": "functional",
+    "mean_probabilities": {
+      "Healthy Control": 0.236273,
+      "Alzheimer's Disease": 0.411068,
+      "Frontotemporal Dementia": 0.352658
+    },
+    "window_vote_counts": {
+      "Healthy Control": 1,
+      "Alzheimer's Disease": 54,
+      "Frontotemporal Dementia": 40
+    },
+    "window_vote_ratios": {
+      "Healthy Control": 0.010526,
+      "Alzheimer's Disease": 0.568421,
+      "Frontotemporal Dementia": 0.421053
+    },
+    "correct": false
+  },
+  "per_window": [
+    {
+      "window_index": 0,
+      "start_sec": 0.0,
+      "end_sec": 5.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.412391,
+      "class_probabilities": {
+        "Healthy Control": 0.297872,
+        "Alzheimer's Disease": 0.412391,
+        "Frontotemporal Dementia": 0.289737
+      }
+    },
+    {
+      "window_index": 1,
+      "start_sec": 5.0,
+      "end_sec": 10.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.420507,
+      "class_probabilities": {
+        "Healthy Control": 0.243692,
+        "Alzheimer's Disease": 0.420507,
+        "Frontotemporal Dementia": 0.335801
+      }
+    },
+    {
+      "window_index": 2,
+      "start_sec": 10.0,
+      "end_sec": 15.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.381968,
+      "class_probabilities": {
+        "Healthy Control": 0.262944,
+        "Alzheimer's Disease": 0.355088,
+        "Frontotemporal Dementia": 0.381968
+      }
+    },
+    {
+      "window_index": 3,
+      "start_sec": 15.0,
+      "end_sec": 20.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.410884,
+      "class_probabilities": {
+        "Healthy Control": 0.276136,
+        "Alzheimer's Disease": 0.31298,
+        "Frontotemporal Dementia": 0.410884
+      }
+    },
+    {
+      "window_index": 4,
+      "start_sec": 20.0,
+      "end_sec": 25.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.495677,
+      "class_probabilities": {
+        "Healthy Control": 0.021695,
+        "Alzheimer's Disease": 0.495677,
+        "Frontotemporal Dementia": 0.482628
+      }
+    },
+    {
+      "window_index": 5,
+      "start_sec": 25.0,
+      "end_sec": 30.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.480999,
+      "class_probabilities": {
+        "Healthy Control": 0.113877,
+        "Alzheimer's Disease": 0.480999,
+        "Frontotemporal Dementia": 0.405124
+      }
+    },
+    {
+      "window_index": 6,
+      "start_sec": 30.0,
+      "end_sec": 35.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.672918,
+      "class_probabilities": {
+        "Healthy Control": 0.116161,
+        "Alzheimer's Disease": 0.672918,
+        "Frontotemporal Dementia": 0.21092
+      }
+    },
+    {
+      "window_index": 7,
+      "start_sec": 35.0,
+      "end_sec": 40.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.418242,
+      "class_probabilities": {
+        "Healthy Control": 0.312966,
+        "Alzheimer's Disease": 0.268792,
+        "Frontotemporal Dementia": 0.418242
+      }
+    },
+    {
+      "window_index": 8,
+      "start_sec": 40.0,
+      "end_sec": 45.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.528861,
+      "class_probabilities": {
+        "Healthy Control": 0.172102,
+        "Alzheimer's Disease": 0.528861,
+        "Frontotemporal Dementia": 0.299037
+      }
+    },
+    {
+      "window_index": 9,
+      "start_sec": 45.0,
+      "end_sec": 50.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.464149,
+      "class_probabilities": {
+        "Healthy Control": 0.168441,
+        "Alzheimer's Disease": 0.464149,
+        "Frontotemporal Dementia": 0.36741
+      }
+    },
+    {
+      "window_index": 10,
+      "start_sec": 50.0,
+      "end_sec": 55.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.394386,
+      "class_probabilities": {
+        "Healthy Control": 0.299866,
+        "Alzheimer's Disease": 0.305748,
+        "Frontotemporal Dementia": 0.394386
+      }
+    },
+    {
+      "window_index": 11,
+      "start_sec": 55.0,
+      "end_sec": 60.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.426026,
+      "class_probabilities": {
+        "Healthy Control": 0.237044,
+        "Alzheimer's Disease": 0.426026,
+        "Frontotemporal Dementia": 0.33693
+      }
+    },
+    {
+      "window_index": 12,
+      "start_sec": 60.0,
+      "end_sec": 65.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.526269,
+      "class_probabilities": {
+        "Healthy Control": 0.153311,
+        "Alzheimer's Disease": 0.526269,
+        "Frontotemporal Dementia": 0.32042
+      }
+    },
+    {
+      "window_index": 13,
+      "start_sec": 65.0,
+      "end_sec": 70.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.451282,
+      "class_probabilities": {
+        "Healthy Control": 0.249652,
+        "Alzheimer's Disease": 0.451282,
+        "Frontotemporal Dementia": 0.299066
+      }
+    },
+    {
+      "window_index": 14,
+      "start_sec": 70.0,
+      "end_sec": 75.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.385457,
+      "class_probabilities": {
+        "Healthy Control": 0.259321,
+        "Alzheimer's Disease": 0.355222,
+        "Frontotemporal Dementia": 0.385457
+      }
+    },
+    {
+      "window_index": 15,
+      "start_sec": 75.0,
+      "end_sec": 80.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.379691,
+      "class_probabilities": {
+        "Healthy Control": 0.249177,
+        "Alzheimer's Disease": 0.379691,
+        "Frontotemporal Dementia": 0.371132
+      }
+    },
+    {
+      "window_index": 16,
+      "start_sec": 80.0,
+      "end_sec": 85.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.653699,
+      "class_probabilities": {
+        "Healthy Control": 0.067362,
+        "Alzheimer's Disease": 0.653699,
+        "Frontotemporal Dementia": 0.278939
+      }
+    },
+    {
+      "window_index": 17,
+      "start_sec": 85.0,
+      "end_sec": 90.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.513624,
+      "class_probabilities": {
+        "Healthy Control": 0.089736,
+        "Alzheimer's Disease": 0.513624,
+        "Frontotemporal Dementia": 0.39664
+      }
+    },
+    {
+      "window_index": 18,
+      "start_sec": 90.0,
+      "end_sec": 95.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.410864,
+      "class_probabilities": {
+        "Healthy Control": 0.240678,
+        "Alzheimer's Disease": 0.410864,
+        "Frontotemporal Dementia": 0.348458
+      }
+    },
+    {
+      "window_index": 19,
+      "start_sec": 95.0,
+      "end_sec": 100.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.552549,
+      "class_probabilities": {
+        "Healthy Control": 0.180082,
+        "Alzheimer's Disease": 0.552549,
+        "Frontotemporal Dementia": 0.267369
+      }
+    },
+    {
+      "window_index": 20,
+      "start_sec": 100.0,
+      "end_sec": 105.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.379093,
+      "class_probabilities": {
+        "Healthy Control": 0.246164,
+        "Alzheimer's Disease": 0.374743,
+        "Frontotemporal Dementia": 0.379093
+      }
+    },
+    {
+      "window_index": 21,
+      "start_sec": 105.0,
+      "end_sec": 110.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.3947,
+      "class_probabilities": {
+        "Healthy Control": 0.255259,
+        "Alzheimer's Disease": 0.350041,
+        "Frontotemporal Dementia": 0.3947
+      }
+    },
+    {
+      "window_index": 22,
+      "start_sec": 110.0,
+      "end_sec": 115.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.431619,
+      "class_probabilities": {
+        "Healthy Control": 0.220507,
+        "Alzheimer's Disease": 0.431619,
+        "Frontotemporal Dementia": 0.347874
+      }
+    },
+    {
+      "window_index": 23,
+      "start_sec": 115.0,
+      "end_sec": 120.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.377343,
+      "class_probabilities": {
+        "Healthy Control": 0.256238,
+        "Alzheimer's Disease": 0.366419,
+        "Frontotemporal Dementia": 0.377343
+      }
+    },
+    {
+      "window_index": 24,
+      "start_sec": 120.0,
+      "end_sec": 125.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.401072,
+      "class_probabilities": {
+        "Healthy Control": 0.248695,
+        "Alzheimer's Disease": 0.401072,
+        "Frontotemporal Dementia": 0.350233
+      }
+    },
+    {
+      "window_index": 25,
+      "start_sec": 125.0,
+      "end_sec": 130.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.379897,
+      "class_probabilities": {
+        "Healthy Control": 0.262704,
+        "Alzheimer's Disease": 0.3574,
+        "Frontotemporal Dementia": 0.379897
+      }
+    },
+    {
+      "window_index": 26,
+      "start_sec": 130.0,
+      "end_sec": 135.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.372023,
+      "class_probabilities": {
+        "Healthy Control": 0.257962,
+        "Alzheimer's Disease": 0.370016,
+        "Frontotemporal Dementia": 0.372023
+      }
+    },
+    {
+      "window_index": 27,
+      "start_sec": 135.0,
+      "end_sec": 140.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.386429,
+      "class_probabilities": {
+        "Healthy Control": 0.247393,
+        "Alzheimer's Disease": 0.366178,
+        "Frontotemporal Dementia": 0.386429
+      }
+    },
+    {
+      "window_index": 28,
+      "start_sec": 140.0,
+      "end_sec": 145.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.394087,
+      "class_probabilities": {
+        "Healthy Control": 0.292433,
+        "Alzheimer's Disease": 0.313479,
+        "Frontotemporal Dementia": 0.394087
+      }
+    },
+    {
+      "window_index": 29,
+      "start_sec": 145.0,
+      "end_sec": 150.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.486683,
+      "class_probabilities": {
+        "Healthy Control": 0.229967,
+        "Alzheimer's Disease": 0.486683,
+        "Frontotemporal Dementia": 0.283351
+      }
+    },
+    {
+      "window_index": 30,
+      "start_sec": 150.0,
+      "end_sec": 155.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.497249,
+      "class_probabilities": {
+        "Healthy Control": 0.215218,
+        "Alzheimer's Disease": 0.497249,
+        "Frontotemporal Dementia": 0.287533
+      }
+    },
+    {
+      "window_index": 31,
+      "start_sec": 155.0,
+      "end_sec": 160.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.371732,
+      "class_probabilities": {
+        "Healthy Control": 0.279516,
+        "Alzheimer's Disease": 0.348753,
+        "Frontotemporal Dementia": 0.371732
+      }
+    },
+    {
+      "window_index": 32,
+      "start_sec": 160.0,
+      "end_sec": 165.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.397293,
+      "class_probabilities": {
+        "Healthy Control": 0.229221,
+        "Alzheimer's Disease": 0.397293,
+        "Frontotemporal Dementia": 0.373486
+      }
+    },
+    {
+      "window_index": 33,
+      "start_sec": 165.0,
+      "end_sec": 170.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.379906,
+      "class_probabilities": {
+        "Healthy Control": 0.266183,
+        "Alzheimer's Disease": 0.353911,
+        "Frontotemporal Dementia": 0.379906
+      }
+    },
+    {
+      "window_index": 34,
+      "start_sec": 170.0,
+      "end_sec": 175.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.428409,
+      "class_probabilities": {
+        "Healthy Control": 0.178225,
+        "Alzheimer's Disease": 0.393366,
+        "Frontotemporal Dementia": 0.428409
+      }
+    },
+    {
+      "window_index": 35,
+      "start_sec": 175.0,
+      "end_sec": 180.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.382731,
+      "class_probabilities": {
+        "Healthy Control": 0.240149,
+        "Alzheimer's Disease": 0.37712,
+        "Frontotemporal Dementia": 0.382731
+      }
+    },
+    {
+      "window_index": 36,
+      "start_sec": 180.0,
+      "end_sec": 185.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.482802,
+      "class_probabilities": {
+        "Healthy Control": 0.246606,
+        "Alzheimer's Disease": 0.482802,
+        "Frontotemporal Dementia": 0.270592
+      }
+    },
+    {
+      "window_index": 37,
+      "start_sec": 185.0,
+      "end_sec": 190.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.379365,
+      "class_probabilities": {
+        "Healthy Control": 0.273159,
+        "Alzheimer's Disease": 0.379365,
+        "Frontotemporal Dementia": 0.347476
+      }
+    },
+    {
+      "window_index": 38,
+      "start_sec": 190.0,
+      "end_sec": 195.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.466121,
+      "class_probabilities": {
+        "Healthy Control": 0.366364,
+        "Alzheimer's Disease": 0.466121,
+        "Frontotemporal Dementia": 0.167515
+      }
+    },
+    {
+      "window_index": 39,
+      "start_sec": 195.0,
+      "end_sec": 200.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.39565,
+      "class_probabilities": {
+        "Healthy Control": 0.222536,
+        "Alzheimer's Disease": 0.381814,
+        "Frontotemporal Dementia": 0.39565
+      }
+    },
+    {
+      "window_index": 40,
+      "start_sec": 200.0,
+      "end_sec": 205.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.374004,
+      "class_probabilities": {
+        "Healthy Control": 0.254348,
+        "Alzheimer's Disease": 0.371648,
+        "Frontotemporal Dementia": 0.374004
+      }
+    },
+    {
+      "window_index": 41,
+      "start_sec": 205.0,
+      "end_sec": 210.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.42658,
+      "class_probabilities": {
+        "Healthy Control": 0.201454,
+        "Alzheimer's Disease": 0.42658,
+        "Frontotemporal Dementia": 0.371967
+      }
+    },
+    {
+      "window_index": 42,
+      "start_sec": 210.0,
+      "end_sec": 215.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.349756,
+      "class_probabilities": {
+        "Healthy Control": 0.303463,
+        "Alzheimer's Disease": 0.346781,
+        "Frontotemporal Dementia": 0.349756
+      }
+    },
+    {
+      "window_index": 43,
+      "start_sec": 215.0,
+      "end_sec": 220.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.376939,
+      "class_probabilities": {
+        "Healthy Control": 0.293501,
+        "Alzheimer's Disease": 0.32956,
+        "Frontotemporal Dementia": 0.376939
+      }
+    },
+    {
+      "window_index": 44,
+      "start_sec": 220.0,
+      "end_sec": 225.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.407244,
+      "class_probabilities": {
+        "Healthy Control": 0.257508,
+        "Alzheimer's Disease": 0.335247,
+        "Frontotemporal Dementia": 0.407244
+      }
+    },
+    {
+      "window_index": 45,
+      "start_sec": 225.0,
+      "end_sec": 230.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.392409,
+      "class_probabilities": {
+        "Healthy Control": 0.256506,
+        "Alzheimer's Disease": 0.351085,
+        "Frontotemporal Dementia": 0.392409
+      }
+    },
+    {
+      "window_index": 46,
+      "start_sec": 230.0,
+      "end_sec": 235.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.365194,
+      "class_probabilities": {
+        "Healthy Control": 0.31258,
+        "Alzheimer's Disease": 0.322226,
+        "Frontotemporal Dementia": 0.365194
+      }
+    },
+    {
+      "window_index": 47,
+      "start_sec": 235.0,
+      "end_sec": 240.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.419611,
+      "class_probabilities": {
+        "Healthy Control": 0.217628,
+        "Alzheimer's Disease": 0.419611,
+        "Frontotemporal Dementia": 0.362761
+      }
+    },
+    {
+      "window_index": 48,
+      "start_sec": 240.0,
+      "end_sec": 245.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.404776,
+      "class_probabilities": {
+        "Healthy Control": 0.314341,
+        "Alzheimer's Disease": 0.280883,
+        "Frontotemporal Dementia": 0.404776
+      }
+    },
+    {
+      "window_index": 49,
+      "start_sec": 245.0,
+      "end_sec": 250.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.376477,
+      "class_probabilities": {
+        "Healthy Control": 0.257386,
+        "Alzheimer's Disease": 0.366137,
+        "Frontotemporal Dementia": 0.376477
+      }
+    },
+    {
+      "window_index": 50,
+      "start_sec": 250.0,
+      "end_sec": 255.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.371058,
+      "class_probabilities": {
+        "Healthy Control": 0.263788,
+        "Alzheimer's Disease": 0.365153,
+        "Frontotemporal Dementia": 0.371058
+      }
+    },
+    {
+      "window_index": 51,
+      "start_sec": 255.0,
+      "end_sec": 260.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.384829,
+      "class_probabilities": {
+        "Healthy Control": 0.262021,
+        "Alzheimer's Disease": 0.384829,
+        "Frontotemporal Dementia": 0.353151
+      }
+    },
+    {
+      "window_index": 52,
+      "start_sec": 260.0,
+      "end_sec": 265.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.408823,
+      "class_probabilities": {
+        "Healthy Control": 0.210222,
+        "Alzheimer's Disease": 0.408823,
+        "Frontotemporal Dementia": 0.380955
+      }
+    },
+    {
+      "window_index": 53,
+      "start_sec": 265.0,
+      "end_sec": 270.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.406418,
+      "class_probabilities": {
+        "Healthy Control": 0.281773,
+        "Alzheimer's Disease": 0.311809,
+        "Frontotemporal Dementia": 0.406418
+      }
+    },
+    {
+      "window_index": 54,
+      "start_sec": 270.0,
+      "end_sec": 275.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.404291,
+      "class_probabilities": {
+        "Healthy Control": 0.225147,
+        "Alzheimer's Disease": 0.404291,
+        "Frontotemporal Dementia": 0.370561
+      }
+    },
+    {
+      "window_index": 55,
+      "start_sec": 275.0,
+      "end_sec": 280.0,
+      "predicted_label": "Healthy Control",
+      "confidence": 0.395976,
+      "class_probabilities": {
+        "Healthy Control": 0.395976,
+        "Alzheimer's Disease": 0.241414,
+        "Frontotemporal Dementia": 0.362611
+      }
+    },
+    {
+      "window_index": 56,
+      "start_sec": 280.0,
+      "end_sec": 285.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.44491,
+      "class_probabilities": {
+        "Healthy Control": 0.185843,
+        "Alzheimer's Disease": 0.44491,
+        "Frontotemporal Dementia": 0.369247
+      }
+    },
+    {
+      "window_index": 57,
+      "start_sec": 285.0,
+      "end_sec": 290.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.402334,
+      "class_probabilities": {
+        "Healthy Control": 0.240936,
+        "Alzheimer's Disease": 0.402334,
+        "Frontotemporal Dementia": 0.35673
+      }
+    },
+    {
+      "window_index": 58,
+      "start_sec": 290.0,
+      "end_sec": 295.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.418952,
+      "class_probabilities": {
+        "Healthy Control": 0.245984,
+        "Alzheimer's Disease": 0.418952,
+        "Frontotemporal Dementia": 0.335064
+      }
+    },
+    {
+      "window_index": 59,
+      "start_sec": 295.0,
+      "end_sec": 300.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.381039,
+      "class_probabilities": {
+        "Healthy Control": 0.272938,
+        "Alzheimer's Disease": 0.381039,
+        "Frontotemporal Dementia": 0.346023
+      }
+    },
+    {
+      "window_index": 60,
+      "start_sec": 300.0,
+      "end_sec": 305.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.750251,
+      "class_probabilities": {
+        "Healthy Control": 0.036974,
+        "Alzheimer's Disease": 0.750251,
+        "Frontotemporal Dementia": 0.212775
+      }
+    },
+    {
+      "window_index": 61,
+      "start_sec": 305.0,
+      "end_sec": 310.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.40357,
+      "class_probabilities": {
+        "Healthy Control": 0.259499,
+        "Alzheimer's Disease": 0.336931,
+        "Frontotemporal Dementia": 0.40357
+      }
+    },
+    {
+      "window_index": 62,
+      "start_sec": 310.0,
+      "end_sec": 315.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.384253,
+      "class_probabilities": {
+        "Healthy Control": 0.239466,
+        "Alzheimer's Disease": 0.384253,
+        "Frontotemporal Dementia": 0.376281
+      }
+    },
+    {
+      "window_index": 63,
+      "start_sec": 315.0,
+      "end_sec": 320.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.474181,
+      "class_probabilities": {
+        "Healthy Control": 0.177284,
+        "Alzheimer's Disease": 0.474181,
+        "Frontotemporal Dementia": 0.348535
+      }
+    },
+    {
+      "window_index": 64,
+      "start_sec": 320.0,
+      "end_sec": 325.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.36912,
+      "class_probabilities": {
+        "Healthy Control": 0.321116,
+        "Alzheimer's Disease": 0.309763,
+        "Frontotemporal Dementia": 0.36912
+      }
+    },
+    {
+      "window_index": 65,
+      "start_sec": 325.0,
+      "end_sec": 330.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.413309,
+      "class_probabilities": {
+        "Healthy Control": 0.218461,
+        "Alzheimer's Disease": 0.36823,
+        "Frontotemporal Dementia": 0.413309
+      }
+    },
+    {
+      "window_index": 66,
+      "start_sec": 330.0,
+      "end_sec": 335.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.463507,
+      "class_probabilities": {
+        "Healthy Control": 0.227375,
+        "Alzheimer's Disease": 0.463507,
+        "Frontotemporal Dementia": 0.309118
+      }
+    },
+    {
+      "window_index": 67,
+      "start_sec": 335.0,
+      "end_sec": 340.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.387905,
+      "class_probabilities": {
+        "Healthy Control": 0.242695,
+        "Alzheimer's Disease": 0.387905,
+        "Frontotemporal Dementia": 0.3694
+      }
+    },
+    {
+      "window_index": 68,
+      "start_sec": 340.0,
+      "end_sec": 345.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.405678,
+      "class_probabilities": {
+        "Healthy Control": 0.27368,
+        "Alzheimer's Disease": 0.320642,
+        "Frontotemporal Dementia": 0.405678
+      }
+    },
+    {
+      "window_index": 69,
+      "start_sec": 345.0,
+      "end_sec": 350.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.393126,
+      "class_probabilities": {
+        "Healthy Control": 0.261698,
+        "Alzheimer's Disease": 0.345176,
+        "Frontotemporal Dementia": 0.393126
+      }
+    },
+    {
+      "window_index": 70,
+      "start_sec": 350.0,
+      "end_sec": 355.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.408492,
+      "class_probabilities": {
+        "Healthy Control": 0.257747,
+        "Alzheimer's Disease": 0.408492,
+        "Frontotemporal Dementia": 0.333761
+      }
+    },
+    {
+      "window_index": 71,
+      "start_sec": 355.0,
+      "end_sec": 360.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.491113,
+      "class_probabilities": {
+        "Healthy Control": 0.265021,
+        "Alzheimer's Disease": 0.491113,
+        "Frontotemporal Dementia": 0.243867
+      }
+    },
+    {
+      "window_index": 72,
+      "start_sec": 360.0,
+      "end_sec": 365.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.392367,
+      "class_probabilities": {
+        "Healthy Control": 0.251153,
+        "Alzheimer's Disease": 0.392367,
+        "Frontotemporal Dementia": 0.35648
+      }
+    },
+    {
+      "window_index": 73,
+      "start_sec": 365.0,
+      "end_sec": 370.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.441167,
+      "class_probabilities": {
+        "Healthy Control": 0.241399,
+        "Alzheimer's Disease": 0.441167,
+        "Frontotemporal Dementia": 0.317435
+      }
+    },
+    {
+      "window_index": 74,
+      "start_sec": 370.0,
+      "end_sec": 375.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.406025,
+      "class_probabilities": {
+        "Healthy Control": 0.245842,
+        "Alzheimer's Disease": 0.406025,
+        "Frontotemporal Dementia": 0.348133
+      }
+    },
+    {
+      "window_index": 75,
+      "start_sec": 375.0,
+      "end_sec": 380.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.476361,
+      "class_probabilities": {
+        "Healthy Control": 0.235781,
+        "Alzheimer's Disease": 0.476361,
+        "Frontotemporal Dementia": 0.287858
+      }
+    },
+    {
+      "window_index": 76,
+      "start_sec": 380.0,
+      "end_sec": 385.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.693701,
+      "class_probabilities": {
+        "Healthy Control": 0.152978,
+        "Alzheimer's Disease": 0.693701,
+        "Frontotemporal Dementia": 0.153321
+      }
+    },
+    {
+      "window_index": 77,
+      "start_sec": 385.0,
+      "end_sec": 390.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.374518,
+      "class_probabilities": {
+        "Healthy Control": 0.262043,
+        "Alzheimer's Disease": 0.363439,
+        "Frontotemporal Dementia": 0.374518
+      }
+    },
+    {
+      "window_index": 78,
+      "start_sec": 390.0,
+      "end_sec": 395.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.547408,
+      "class_probabilities": {
+        "Healthy Control": 0.197837,
+        "Alzheimer's Disease": 0.547408,
+        "Frontotemporal Dementia": 0.254755
+      }
+    },
+    {
+      "window_index": 79,
+      "start_sec": 395.0,
+      "end_sec": 400.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.390649,
+      "class_probabilities": {
+        "Healthy Control": 0.243055,
+        "Alzheimer's Disease": 0.366295,
+        "Frontotemporal Dementia": 0.390649
+      }
+    },
+    {
+      "window_index": 80,
+      "start_sec": 400.0,
+      "end_sec": 405.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.385908,
+      "class_probabilities": {
+        "Healthy Control": 0.270134,
+        "Alzheimer's Disease": 0.343958,
+        "Frontotemporal Dementia": 0.385908
+      }
+    },
+    {
+      "window_index": 81,
+      "start_sec": 405.0,
+      "end_sec": 410.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.38495,
+      "class_probabilities": {
+        "Healthy Control": 0.247171,
+        "Alzheimer's Disease": 0.367879,
+        "Frontotemporal Dementia": 0.38495
+      }
+    },
+    {
+      "window_index": 82,
+      "start_sec": 410.0,
+      "end_sec": 415.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.397404,
+      "class_probabilities": {
+        "Healthy Control": 0.247642,
+        "Alzheimer's Disease": 0.397404,
+        "Frontotemporal Dementia": 0.354954
+      }
+    },
+    {
+      "window_index": 83,
+      "start_sec": 415.0,
+      "end_sec": 420.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.398682,
+      "class_probabilities": {
+        "Healthy Control": 0.253971,
+        "Alzheimer's Disease": 0.347346,
+        "Frontotemporal Dementia": 0.398682
+      }
+    },
+    {
+      "window_index": 84,
+      "start_sec": 420.0,
+      "end_sec": 425.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.477686,
+      "class_probabilities": {
+        "Healthy Control": 0.20348,
+        "Alzheimer's Disease": 0.477686,
+        "Frontotemporal Dementia": 0.318834
+      }
+    },
+    {
+      "window_index": 85,
+      "start_sec": 425.0,
+      "end_sec": 430.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.3915,
+      "class_probabilities": {
+        "Healthy Control": 0.269743,
+        "Alzheimer's Disease": 0.338757,
+        "Frontotemporal Dementia": 0.3915
+      }
+    },
+    {
+      "window_index": 86,
+      "start_sec": 430.0,
+      "end_sec": 435.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.383366,
+      "class_probabilities": {
+        "Healthy Control": 0.262314,
+        "Alzheimer's Disease": 0.383366,
+        "Frontotemporal Dementia": 0.35432
+      }
+    },
+    {
+      "window_index": 87,
+      "start_sec": 435.0,
+      "end_sec": 440.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.476802,
+      "class_probabilities": {
+        "Healthy Control": 0.182459,
+        "Alzheimer's Disease": 0.476802,
+        "Frontotemporal Dementia": 0.340739
+      }
+    },
+    {
+      "window_index": 88,
+      "start_sec": 440.0,
+      "end_sec": 445.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.391689,
+      "class_probabilities": {
+        "Healthy Control": 0.282665,
+        "Alzheimer's Disease": 0.391689,
+        "Frontotemporal Dementia": 0.325647
+      }
+    },
+    {
+      "window_index": 89,
+      "start_sec": 445.0,
+      "end_sec": 450.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.442712,
+      "class_probabilities": {
+        "Healthy Control": 0.216346,
+        "Alzheimer's Disease": 0.442712,
+        "Frontotemporal Dementia": 0.340943
+      }
+    },
+    {
+      "window_index": 90,
+      "start_sec": 450.0,
+      "end_sec": 455.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.370638,
+      "class_probabilities": {
+        "Healthy Control": 0.2685,
+        "Alzheimer's Disease": 0.360862,
+        "Frontotemporal Dementia": 0.370638
+      }
+    },
+    {
+      "window_index": 91,
+      "start_sec": 455.0,
+      "end_sec": 460.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.434284,
+      "class_probabilities": {
+        "Healthy Control": 0.209495,
+        "Alzheimer's Disease": 0.434284,
+        "Frontotemporal Dementia": 0.356221
+      }
+    },
+    {
+      "window_index": 92,
+      "start_sec": 460.0,
+      "end_sec": 465.0,
+      "predicted_label": "Frontotemporal Dementia",
+      "confidence": 0.374163,
+      "class_probabilities": {
+        "Healthy Control": 0.264101,
+        "Alzheimer's Disease": 0.361735,
+        "Frontotemporal Dementia": 0.374163
+      }
+    },
+    {
+      "window_index": 93,
+      "start_sec": 465.0,
+      "end_sec": 470.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.493223,
+      "class_probabilities": {
+        "Healthy Control": 0.201101,
+        "Alzheimer's Disease": 0.493223,
+        "Frontotemporal Dementia": 0.305676
+      }
+    },
+    {
+      "window_index": 94,
+      "start_sec": 470.0,
+      "end_sec": 475.0,
+      "predicted_label": "Alzheimer's Disease",
+      "confidence": 0.510493,
+      "class_probabilities": {
+        "Healthy Control": 0.155796,
+        "Alzheimer's Disease": 0.510493,
+        "Frontotemporal Dementia": 0.333711
+      }
+    }
+  ]
+}
